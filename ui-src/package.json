@@ -1,0 +1,21 @@
+{
+  "name": "cja-mcp-app-tests-ui",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "MCP Apps widgets for cja-mcp-server. The Java server serves a thin HTML shell that loads the widget code from this project's GitHub Pages build or its Vite dev server.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/ext-apps": "^1.0.0",
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "chart.js": "^4.4.7"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vite": "^6.0.0"
+  }
+}
