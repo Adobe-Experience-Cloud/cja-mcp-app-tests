@@ -53,6 +53,14 @@ Chart.register(
   Filler,
 );
 
+// ---- Version ----
+// From package.json "version" (see vite.config.ts). Shown as v<major>.<minor>, or v<major> when the
+// minor is 0 and major >= 1: 0.1.0 -> "v0.1", 1.0.0 -> "v1", 1.2.0 -> "v1.2".
+const WIDGET_VERSION_LABEL = (() => {
+  const [major = "0", minor = "0"] = __WIDGET_VERSION__.split(".");
+  return Number(major) >= 1 && minor === "0" ? `v${major}` : `v${major}.${minor}`;
+})();
+
 // ---- DOM ----
 function buildDom(): void {
   const mount = document.getElementById("app") ?? document.body;
@@ -71,6 +79,7 @@ function buildDom(): void {
       <section class="chart-wrap" id="chart-wrap" hidden>
         <canvas id="chart"></canvas>
       </section>
+      <footer class="widget-version" title="Widget build">${WIDGET_VERSION_LABEL}</footer>
     </main>`;
 }
 buildDom();

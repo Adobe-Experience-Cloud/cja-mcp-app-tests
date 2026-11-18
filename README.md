@@ -39,4 +39,8 @@ npm run build      # dist/run-visual-report.js, one file with CSS included
 npm run typecheck
 ```
 
+## Version tag
+
+The widget footer shows the version from `ui-src/package.json`, so you can tell which deploy the iframe loaded. `0.1.0` shows as `v0.1` while in development; set it to `1.0.0` for `v1`.
+
 GitHub Pages caches files for up to 10 minutes, so a new deploy can take that long to reach the iframe.
